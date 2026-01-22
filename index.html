@@ -63,12 +63,12 @@
         .card {
             background: var(--glass-panel); backdrop-filter: blur(12px);
             
-            /* ✨ NEON BORDER ADDED HERE ✨ */
+            /* Card ka Neon Border */
             border: 1px solid var(--primary-neon);
             box-shadow: 
-                0 0 5px var(--primary-neon),    /* Inner glow */
-                0 0 15px var(--primary-neon),   /* Middle glow */
-                inset 0 0 10px rgba(0, 243, 255, 0.1); /* Subtle inner light */
+                0 0 5px var(--primary-neon),
+                0 0 15px var(--primary-neon),
+                inset 0 0 10px rgba(0, 243, 255, 0.1);
 
             padding: 40px; text-align: center;
             clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 92% 100%, 0% 100%);
@@ -110,7 +110,7 @@
         @media (max-width: 600px) { .card-container { width: 95%; transform: none !important; } body { perspective: none; } }
 
         /* ========================================================================
-           CATBOX WAIFU STYLE (SINGLE NEON GLOW - STABLE)
+           CATBOX WAIFU STYLE (GLOW STICKING TO BODY)
            ======================================================================== */
         #catbox-waifu {
             position: fixed;
@@ -127,11 +127,16 @@
             max-height: 250px;
             max-width: 100%;
             
-            /* ✨ SINGLE NEON GLOW (Chipka hua) */
-            filter: drop-shadow(0 0 5px var(--primary-neon)) 
-                    drop-shadow(0 0 15px var(--primary-neon));
+            /* 🚫 PURANA BORDER HATA DIYA (No Box) */
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+
+            /* ✨ NEW: DROP-SHADOW (Jo body se chipak kar glow karega) */
+            filter: drop-shadow(0 0 2px var(--primary-neon)) 
+                    drop-shadow(0 0 10px var(--primary-neon));
                 
-            /* No Animation, No Movement */
+            /* No Animation */
             animation: none;
             transform: none;
         }
