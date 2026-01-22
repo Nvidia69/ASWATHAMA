@@ -10,7 +10,7 @@
            CORE VARIABLES & ASSETS
            ======================================================================== */
         :root {
-            --primary-neon: #00f7ff; /* Ye wo Blue color hai */
+            --primary-neon: #00f7ff; /* Cyan Blue */
             --secondary-neon: #bc13fe;
             --bg-dark: #050505;
             --glass-panel: rgba(10, 15, 20, 0.75);
@@ -55,13 +55,25 @@
         .cursor-dot { width: 5px; height: 5px; background: var(--primary-neon); }
         .cursor-circle { width: 30px; height: 30px; border: 1px solid var(--primary-neon); transition: width 0.2s, height 0.2s; }
 
-        /* MAIN CARD */
+        /* ========================================================================
+           MAIN CARD (WITH NEON GLOW BORDER)
+           ======================================================================== */
         .card-container { position: relative; z-index: 10; width: 400px; transform-style: preserve-3d; transition: transform 0.1s ease-out; }
+        
         .card {
-            background: var(--glass-panel); backdrop-filter: blur(12px); border: 1px solid var(--border-color);
-            padding: 40px; text-align: center; box-shadow: 0 0 20px rgba(0, 243, 255, 0.1), inset 0 0 20px rgba(0, 243, 255, 0.05);
+            background: var(--glass-panel); backdrop-filter: blur(12px);
+            
+            /* ✨ NEON BORDER ADDED HERE ✨ */
+            border: 1px solid var(--primary-neon);
+            box-shadow: 
+                0 0 5px var(--primary-neon),    /* Inner glow */
+                0 0 15px var(--primary-neon),   /* Middle glow */
+                inset 0 0 10px rgba(0, 243, 255, 0.1); /* Subtle inner light */
+
+            padding: 40px; text-align: center;
             clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 92% 100%, 0% 100%);
         }
+        
         .card::before { content: "C.DEVS.CORP"; position: absolute; top: 10px; right: 15px; font-size: 10px; opacity: 0.6; letter-spacing: 2px; }
 
         .profile-img {
@@ -98,7 +110,7 @@
         @media (max-width: 600px) { .card-container { width: 95%; transform: none !important; } body { perspective: none; } }
 
         /* ========================================================================
-           CATBOX WAIFU STYLE (SINGLE NEON COLOR GLOW)
+           CATBOX WAIFU STYLE (SINGLE NEON GLOW - STABLE)
            ======================================================================== */
         #catbox-waifu {
             position: fixed;
@@ -115,9 +127,7 @@
             max-height: 250px;
             max-width: 100%;
             
-            /* ✨ SINGLE NEON GLOW (Chipka hua) 
-               - Color: var(--primary-neon) jo ki Cyan Blue hai
-            */
+            /* ✨ SINGLE NEON GLOW (Chipka hua) */
             filter: drop-shadow(0 0 5px var(--primary-neon)) 
                     drop-shadow(0 0 15px var(--primary-neon));
                 
