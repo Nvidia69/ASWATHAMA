@@ -10,12 +10,11 @@
            CORE VARIABLES & ASSETS
            ======================================================================== */
         :root {
-            --primary-neon: #00f7ff;
+            --primary-neon: #00f7ff; /* Ye wo Blue color hai */
             --secondary-neon: #bc13fe;
             --bg-dark: #050505;
             --glass-panel: rgba(10, 15, 20, 0.75);
             --border-color: rgba(145, 255, 0, 0.3);
-            /* Background Image yahan daal sakte hain */
             --bg-image-url: url(''); 
         }
 
@@ -99,7 +98,7 @@
         @media (max-width: 600px) { .card-container { width: 95%; transform: none !important; } body { perspective: none; } }
 
         /* ========================================================================
-           CATBOX WAIFU STYLE (Fixed Bottom Right)
+           CATBOX WAIFU STYLE (SINGLE NEON COLOR GLOW)
            ======================================================================== */
         #catbox-waifu {
             position: fixed;
@@ -110,15 +109,25 @@
             width: auto;
             height: auto;
         }
+
         #catbox-waifu img {
             display: block;
-            max-height: 250px; /* PC ke liye size */
+            max-height: 250px;
             max-width: 100%;
-            opacity: 1;
-            transition: opacity 0.3s;
+            
+            /* ✨ SINGLE NEON GLOW (Chipka hua) 
+               - Color: var(--primary-neon) jo ki Cyan Blue hai
+            */
+            filter: drop-shadow(0 0 5px var(--primary-neon)) 
+                    drop-shadow(0 0 15px var(--primary-neon));
+                
+            /* No Animation, No Movement */
+            animation: none;
+            transform: none;
         }
+
         @media (max-width: 600px) {
-            #catbox-waifu img { max-height: 120px; } /* Mobile par chhota */
+            #catbox-waifu img { max-height: 120px; }
         }
     </style>
 </head>
