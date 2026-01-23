@@ -111,6 +111,28 @@ var random_images_array = [
     "110.png",
     "111.png",
     "112.png"
+    "113.png",
+    "114.png",
+    "115.png",
+    "116.png",
+    "117.png",
+    "118.png",
+    "119.png",
+    "120.png",
+    "121.png",
+    "122.png",
+    "123.png",
+    "124.png",
+    "125.png",
+    "126.png",
+    "127.png",
+    "128.png",
+    "129.png",
+    "130.png",
+    "131.png",
+    "132.png",
+    "133.png",
+    "134.png",
 ];
 
 function loadCatboxWaifu() {
@@ -138,3 +160,4 @@ function loadCatboxWaifu() {
 // Page load hone par function chalana
 
 window.addEventListener('DOMContentLoaded', loadCatboxWaifu);
+
