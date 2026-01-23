@@ -110,6 +110,7 @@ var random_images_array = [
     "109.png",
     "110.png",
     "111.png",
+    "112.png"
 ];
 
 function loadCatboxWaifu() {
@@ -135,4 +136,5 @@ function loadCatboxWaifu() {
 }
 
 // Page load hone par function chalana
+
 window.addEventListener('DOMContentLoaded', loadCatboxWaifu);
